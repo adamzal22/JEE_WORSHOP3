@@ -63,7 +63,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-                    <li><a href="/index.html" class="sidebar-brand d-flex align-items-center justify-content-center">Home</a></li>
+                    <li><a href="/home" class="sidebar-brand d-flex align-items-center justify-content-center">Home</a></li>
                     <li><a href="/user/list" class="sidebar-brand d-flex align-items-center justify-content-center">Lista użytkowników</a></li>
 
         </li>

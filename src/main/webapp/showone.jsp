@@ -4,7 +4,7 @@
 <html lang="en">
 <style>
     .button {
-        background-color: #60616f#4CAF58; /* Green */
+        background-color: #60616f; /* Green */
         border: none;
         color: white;
         padding: 5px 10px;
@@ -51,7 +51,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="list.jsp">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
             </div>
@@ -63,7 +63,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-        <li><a href="/index.html" class="sidebar-brand d-flex align-items-center justify-content-center">Home</a></li>
+        <li><a href="/home" class="sidebar-brand d-flex align-items-center justify-content-center">Home</a></li>
         <li><a href="/user/list" class="sidebar-brand d-flex align-items-center justify-content-center">Lista użytkowników</a></li>
         </li>
 
@@ -101,7 +101,7 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                             <tr>
                                 <th>ID</th>

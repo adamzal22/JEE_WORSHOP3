@@ -2,7 +2,32 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    .button {
+        background-color: #60616f; /* Green */
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 25px;
+    }
 
+
+    .button3 {background-color: #f44336;} /* Red */
+    .button4 {background-color: #e7e7e7; color: black;} /* Gray */
+    .button5 {background-color: #555555;} /* Black */
+</style>
 <head>
 
     <meta charset="utf-8">
@@ -11,7 +36,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Użytkownicy - Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -62,71 +87,50 @@
         <!-- Main Content -->
         <div id="content">
 
-            <!-- Begin Page Content -->
-
-            <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
             <%@ include file="/fragments/header.jspf" %>
-
+            <!-- Begin Page Content -->
             <div class="container-fluid">
 
-
                 <!-- Page Heading -->
-
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-
-                    <h1 class="h3 mb-0 text-gray-800">Modification tool</h1>
-
-
-                </div>
-
-                <div class="card shadow mb-4">
-
-                    <div class="card-header py-3">
-
-                        <h6 class="m-0 font-weight-bold text-primary">Edytuj użytkownika</h6>
-
-                    </div>
-
-                    <div class="card-body">
-
-                        <form action="" method="post">
-
-                            <div class="form-group">
-                                <td>${read.id}</td>
-
-
-
-                             <p><text>Witaj ${user.username}</text></p>
-
-                                <label for="userName">Nowa nazwa</label>
-                                <input name="userName" type="text" class="form-control" id="userName" placeholder="Nazwa użytkownika">
-
-                            </div>
-
-                            <div class="form-group">
-                                <label for="userEmail">Nowy Email</label>
-                                <input name="userEmail" type="email" class="form-control" id="userEmail" placeholder="Email użytkownika">
-
-                            </div>
-
-                            <div class="form-group">
-                                <label for="userEmail">Nowe hasło</label>
-                                <input name="userPassword" type="password" class="form-control" id="userPassword" placeholder="Hasło użytkownika">
-
-                            </div>
-
-
-                            <button type="submit" class="btn btn-primary">Zapisz</button>
-
-                        </form>
-
-
-                    </div>
-
+                    <h1 class="h3 mb-0 text-gray-800">Witaj w Menadżerze Użytkowników!</h1>
                 </div>
 
             </div>
+
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">by Adam Zalewski</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table-bordered" id="dataTable" width="100%" cellspacing="0">
+                            <tbody>
+                            <img src="/img/undraw_posting_photo.svg" alt="home" class="center">
+                            </tbody>
+
+                            <%--<a href="/user/remove?id=${user.id}" class="button2" onclick="return confirm('Czy na pewno chcesz usunąć użytkownika?');"></a>--%>
+
+                            <%--<th>email</th>
+                            <th>akcja</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>${user.id}</td>
+
+                                <td>${user.email}</td>
+                                <td><a href="/user/edit?id=${user.id}" class="button" >Edytuj</a>
+                                    <a href="/user/edit" class="button" >Usuń</a>
+                            </tr>
+                        </tbody>--%>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
 
             <%@ include file="/fragments/footer.jspf" %>
 
@@ -160,7 +164,7 @@
             </div>
         </div>
     </div>
-</div>
+
 
     <!-- Bootstrap core JavaScript-->
     <script src="../vendor/jquery/jquery.min.js"></script>
