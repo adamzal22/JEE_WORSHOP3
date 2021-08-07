@@ -1,16 +1,13 @@
 package pl.coderslab.user;
 
 import org.mindrot.jbcrypt.BCrypt;
-import pl.coderslab.utils.DBUtil;
 import pl.coderslab.utils.DbUtil;
 
-import javax.naming.NamingException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class userDAO {
 
@@ -93,7 +90,7 @@ public class userDAO {
         System.out.println("Podaj ID");*//*
         int ID_to_delete = scanner.nextInt();*/
 
-        try (Connection conn = DBUtil.connect()) {
+        try (Connection conn = DbUtil.getConnection()) {
             PreparedStatement pretStat3 = conn.prepareStatement(DELETE);
             pretStat3.setInt(1, ID_to_delete);
             pretStat3.executeUpdate();
@@ -156,14 +153,11 @@ public class userDAO {
 
     public static void update(User user) {
 
-        try (Connection conn = DBUtil.connect()) {
+        try (Connection conn = DbUtil.getConnection()) {
             PreparedStatement stmt3 = conn.prepareStatement(UPDATE);
             stmt3.setString(2, user.getUsername());
-
             stmt3.setString(1, user.getEmail());
-
             stmt3.setString(3, BCrypt.hashpw(user.getPassword(),BCrypt.gensalt()));
-
             stmt3.setInt(4, user.getId());
             stmt3.executeUpdate();
             System.out.println(user);

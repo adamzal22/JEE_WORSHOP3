@@ -120,8 +120,8 @@
                             </tr>
                             </thead>
                             <p>
-                            <a href="/user/remove?id=${user.id}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                    class="fas fa-download fa-sm text-white-50" onclick="return confirm('Czy na pewno chcesz usunąć użytkownika?');"></i> Usuń użytkownika</a>
+                            <a href="/user/remove?id=${user.id}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" onclick="return confirm('Czy na pewno chcesz usunąć użytkownika?');"><i
+                                    class="fas fa-download fa-sm text-white-50" ></i> Usuń użytkownika</a>
                                 <a href="/user/edit?id=${user.id}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                         class="fas fa-download fa-sm text-white-50"></i> Edytuj użytkownika</a>
                             </p>
