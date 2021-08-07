@@ -120,9 +120,9 @@
                             </tr>
                             </thead>
                             <p>
-                            <a href="/user/remove" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                            <a href="/user/remove?id=${user.id}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                     class="fas fa-download fa-sm text-white-50" onclick="return confirm('Czy na pewno chcesz usunąć użytkownika?');"></i> Usuń użytkownika</a>
-                                <a href="/user/edit" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                <a href="/user/edit?id=${user.id}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                         class="fas fa-download fa-sm text-white-50"></i> Edytuj użytkownika</a>
                             </p>
                         <%--<a href="/user/remove?id=${user.id}" class="button2" onclick="return confirm('Czy na pewno chcesz usunąć użytkownika?');"></a>--%>

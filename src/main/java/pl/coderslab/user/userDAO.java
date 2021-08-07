@@ -158,12 +158,12 @@ public class userDAO {
 
         try (Connection conn = DBUtil.connect()) {
             PreparedStatement stmt3 = conn.prepareStatement(UPDATE);
-            stmt3.setString(1, user.getUsername());
-            user.setUsername(user.getUsername());
-            stmt3.setString(2, user.getEmail());
-            user.setEmail(user.getEmail());
+            stmt3.setString(2, user.getUsername());
+
+            stmt3.setString(1, user.getEmail());
+
             stmt3.setString(3, BCrypt.hashpw(user.getPassword(),BCrypt.gensalt()));
-            user.setPassword(BCrypt.hashpw(user.getPassword(),BCrypt.gensalt()));
+
             stmt3.setInt(4, user.getId());
             stmt3.executeUpdate();
             System.out.println(user);
